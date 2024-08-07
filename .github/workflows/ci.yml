@@ -1,0 +1,44 @@
+name: CI
+
+on: [push]
+
+jobs:
+  SwiftLint:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Github Action for SwiftLint
+      uses: norio-nomura/action-swiftlint@3.0.1
+
+  Build:
+    runs-on: macos-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+      with:
+        fetch-depth: 1
+
+    - name: Select latest Xcode
+      uses: maxim-lobanov/setup-xcode@v1
+      with:
+        xcode-version: latest-stable
+
+    - name: Build app
+      run: xcodebuild -project 'CryptoPrice.xcodeproj' -scheme 'CryptoPrice' -destination 'generic/platform=iOS' -configuration Release build CODE_SIGNING_ALLOWED=NO | xcpretty
+
+  Test:
+    runs-on: macos-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+      with:
+        fetch-depth: 1
+
+    - name: Select latest Xcode
+      uses: maxim-lobanov/setup-xcode@v1
+      with:
+        xcode-version: latest-stable
+
+    - name: Run tests
+      if: steps.cache.outputs.cache-hit != 'true'
+      run: xcodebuild -project 'CryptoPrice.xcodeproj' -scheme 'CryptoPrice' -destination 'platform=iOS Simulator,name=iPhone 15 Pro' clean build-for-testing test | xcpretty

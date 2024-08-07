@@ -9,13 +9,31 @@
 /* Begin PBXBuildFile section */
 		161AF84D2C6417E700854037 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF84C2C6417E700854037 /* AppDelegate.swift */; };
 		161AF84F2C6417E700854037 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF84E2C6417E700854037 /* SceneDelegate.swift */; };
-		161AF8512C6417E700854037 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF8502C6417E700854037 /* ViewController.swift */; };
-		161AF8542C6417E700854037 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 161AF8532C6417E700854037 /* Base */; };
 		161AF8562C6417E800854037 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 161AF8552C6417E800854037 /* Assets.xcassets */; };
 		161AF8592C6417E800854037 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 161AF8582C6417E800854037 /* Base */; };
 		161AF8642C6417E800854037 /* SuperLottoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF8632C6417E800854037 /* SuperLottoTests.swift */; };
 		161AF86E2C6417E800854037 /* SuperLottoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF86D2C6417E800854037 /* SuperLottoUITests.swift */; };
 		161AF8702C6417E800854037 /* SuperLottoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF86F2C6417E800854037 /* SuperLottoUITestsLaunchTests.swift */; };
+		161AF87E2C64188800854037 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF87D2C64188800854037 /* ApplicationCoordinator.swift */; };
+		161AF8822C64189D00854037 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF87F2C64189D00854037 /* Coordinator.swift */; };
+		161AF8832C64189D00854037 /* LotteryDrawCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF8802C64189D00854037 /* LotteryDrawCoordinator.swift */; };
+		161AF8942C6418AC00854037 /* draws.json in Resources */ = {isa = PBXBuildFile; fileRef = 161AF8842C6418AB00854037 /* draws.json */; };
+		161AF8952C6418AC00854037 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF8862C6418AB00854037 /* AppConstants.swift */; };
+		161AF8962C6418AC00854037 /* DeveloperPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF8872C6418AB00854037 /* DeveloperPreview.swift */; };
+		161AF8972C6418AC00854037 /* LotteryDraw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF8882C6418AB00854037 /* LotteryDraw.swift */; };
+		161AF8982C6418AC00854037 /* Int+InWords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF88A2C6418AB00854037 /* Int+InWords.swift */; };
+		161AF8992C6418AC00854037 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF88B2C6418AB00854037 /* String+Extensions.swift */; };
+		161AF89A2C6418AC00854037 /* LotteryDrawItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF88D2C6418AB00854037 /* LotteryDrawItemView.swift */; };
+		161AF89B2C6418AC00854037 /* LotteryDrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF88E2C6418AB00854037 /* LotteryDrawView.swift */; };
+		161AF89C2C6418AC00854037 /* LotteryDrawItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF8902C6418AB00854037 /* LotteryDrawItemViewModel.swift */; };
+		161AF89D2C6418AC00854037 /* LotteryDrawListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF8912C6418AB00854037 /* LotteryDrawListView.swift */; };
+		161AF89E2C6418AC00854037 /* LotteryDrawListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF8922C6418AB00854037 /* LotteryDrawListViewModel.swift */; };
+		161AF8A22C6418B300854037 /* MockLotteryDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF89F2C6418B300854037 /* MockLotteryDataService.swift */; };
+		161AF8A32C6418B300854037 /* NetworkLotteryDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF8A02C6418B300854037 /* NetworkLotteryDataService.swift */; };
+		161AF8AC2C64202600854037 /* StateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF8AB2C64202600854037 /* StateModel.swift */; };
+		161AF8B02C64205300854037 /* Features.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF8AD2C64205300854037 /* Features.swift */; };
+		161AF8B12C64205300854037 /* DomainResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF8AE2C64205300854037 /* DomainResult.swift */; };
+		161AF8B22C64205300854037 /* ClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF8AF2C64205300854037 /* ClientError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +57,6 @@
 		161AF8492C6417E700854037 /* SuperLotto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperLotto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		161AF84C2C6417E700854037 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		161AF84E2C6417E700854037 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		161AF8502C6417E700854037 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		161AF8532C6417E700854037 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		161AF8552C6417E800854037 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		161AF8582C6417E800854037 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		161AF85A2C6417E800854037 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +65,26 @@
 		161AF8692C6417E800854037 /* SuperLottoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SuperLottoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		161AF86D2C6417E800854037 /* SuperLottoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperLottoUITests.swift; sourceTree = "<group>"; };
 		161AF86F2C6417E800854037 /* SuperLottoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperLottoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		161AF87D2C64188800854037 /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
+		161AF87F2C64189D00854037 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		161AF8802C64189D00854037 /* LotteryDrawCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LotteryDrawCoordinator.swift; sourceTree = "<group>"; };
+		161AF8842C6418AB00854037 /* draws.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = draws.json; sourceTree = "<group>"; };
+		161AF8862C6418AB00854037 /* AppConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		161AF8872C6418AB00854037 /* DeveloperPreview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeveloperPreview.swift; sourceTree = "<group>"; };
+		161AF8882C6418AB00854037 /* LotteryDraw.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LotteryDraw.swift; sourceTree = "<group>"; };
+		161AF88A2C6418AB00854037 /* Int+InWords.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+InWords.swift"; sourceTree = "<group>"; };
+		161AF88B2C6418AB00854037 /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		161AF88D2C6418AB00854037 /* LotteryDrawItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LotteryDrawItemView.swift; sourceTree = "<group>"; };
+		161AF88E2C6418AB00854037 /* LotteryDrawView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LotteryDrawView.swift; sourceTree = "<group>"; };
+		161AF8902C6418AB00854037 /* LotteryDrawItemViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LotteryDrawItemViewModel.swift; sourceTree = "<group>"; };
+		161AF8912C6418AB00854037 /* LotteryDrawListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LotteryDrawListView.swift; sourceTree = "<group>"; };
+		161AF8922C6418AB00854037 /* LotteryDrawListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LotteryDrawListViewModel.swift; sourceTree = "<group>"; };
+		161AF89F2C6418B300854037 /* MockLotteryDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockLotteryDataService.swift; sourceTree = "<group>"; };
+		161AF8A02C6418B300854037 /* NetworkLotteryDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkLotteryDataService.swift; sourceTree = "<group>"; };
+		161AF8AB2C64202600854037 /* StateModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateModel.swift; sourceTree = "<group>"; };
+		161AF8AD2C64205300854037 /* Features.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Features.swift; sourceTree = "<group>"; };
+		161AF8AE2C64205300854037 /* DomainResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DomainResult.swift; sourceTree = "<group>"; };
+		161AF8AF2C64205300854037 /* ClientError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +135,14 @@
 		161AF84B2C6417E700854037 /* SuperLotto */ = {
 			isa = PBXGroup;
 			children = (
-				161AF84C2C6417E700854037 /* AppDelegate.swift */,
-				161AF84E2C6417E700854037 /* SceneDelegate.swift */,
-				161AF8502C6417E700854037 /* ViewController.swift */,
-				161AF8522C6417E700854037 /* Main.storyboard */,
-				161AF8552C6417E800854037 /* Assets.xcassets */,
-				161AF8572C6417E800854037 /* LaunchScreen.storyboard */,
-				161AF85A2C6417E800854037 /* Info.plist */,
+				161AF87C2C6417EE00854037 /* App */,
+				161AF8812C64189D00854037 /* Coordinators */,
+				161AF88C2C6418AB00854037 /* Extensions */,
+				161AF8852C6418AB00854037 /* MockData */,
+				161AF8892C6418AB00854037 /* Models */,
+				161AF8A42C64194500854037 /* Resources */,
+				161AF8A52C641E0400854037 /* Screens */,
+				161AF8A12C6418B300854037 /* Service */,
 			);
 			path = SuperLotto;
 			sourceTree = "<group>";
@@ -125,6 +162,143 @@
 				161AF86F2C6417E800854037 /* SuperLottoUITestsLaunchTests.swift */,
 			);
 			path = SuperLottoUITests;
+			sourceTree = "<group>";
+		};
+		161AF87C2C6417EE00854037 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				161AF8572C6417E800854037 /* LaunchScreen.storyboard */,
+				161AF85A2C6417E800854037 /* Info.plist */,
+				161AF84C2C6417E700854037 /* AppDelegate.swift */,
+				161AF87D2C64188800854037 /* ApplicationCoordinator.swift */,
+				161AF84E2C6417E700854037 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		161AF8812C64189D00854037 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				161AF87F2C64189D00854037 /* Coordinator.swift */,
+				161AF8802C64189D00854037 /* LotteryDrawCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		161AF8852C6418AB00854037 /* MockData */ = {
+			isa = PBXGroup;
+			children = (
+				161AF8842C6418AB00854037 /* draws.json */,
+			);
+			path = MockData;
+			sourceTree = "<group>";
+		};
+		161AF8892C6418AB00854037 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				161AF8AA2C64201900854037 /* Core */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		161AF88C2C6418AB00854037 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				161AF88A2C6418AB00854037 /* Int+InWords.swift */,
+				161AF88B2C6418AB00854037 /* String+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		161AF88F2C6418AB00854037 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				161AF8A62C641E5E00854037 /* SubViews */,
+				161AF8912C6418AB00854037 /* LotteryDrawListView.swift */,
+				161AF88E2C6418AB00854037 /* LotteryDrawView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		161AF8932C6418AB00854037 /* DrawList */ = {
+			isa = PBXGroup;
+			children = (
+				161AF8A92C641F3B00854037 /* UseCases */,
+				161AF8A82C641E8F00854037 /* ViewModel */,
+				161AF8A72C641E7A00854037 /* Model */,
+				161AF88F2C6418AB00854037 /* Views */,
+			);
+			path = DrawList;
+			sourceTree = "<group>";
+		};
+		161AF8A12C6418B300854037 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				161AF89F2C6418B300854037 /* MockLotteryDataService.swift */,
+				161AF8A02C6418B300854037 /* NetworkLotteryDataService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		161AF8A42C64194500854037 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				161AF8552C6417E800854037 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		161AF8A52C641E0400854037 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				161AF8932C6418AB00854037 /* DrawList */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		161AF8A62C641E5E00854037 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				161AF8902C6418AB00854037 /* LotteryDrawItemViewModel.swift */,
+				161AF88D2C6418AB00854037 /* LotteryDrawItemView.swift */,
+			);
+			path = SubViews;
+			sourceTree = "<group>";
+		};
+		161AF8A72C641E7A00854037 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				161AF8882C6418AB00854037 /* LotteryDraw.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		161AF8A82C641E8F00854037 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				161AF8922C6418AB00854037 /* LotteryDrawListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		161AF8A92C641F3B00854037 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		161AF8AA2C64201900854037 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				161AF8872C6418AB00854037 /* DeveloperPreview.swift */,
+				161AF8862C6418AB00854037 /* AppConstants.swift */,
+				161AF8AF2C64205300854037 /* ClientError.swift */,
+				161AF8AE2C64205300854037 /* DomainResult.swift */,
+				161AF8AD2C64205300854037 /* Features.swift */,
+				161AF8AB2C64202600854037 /* StateModel.swift */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,7 +407,7 @@
 			files = (
 				161AF8562C6417E800854037 /* Assets.xcassets in Resources */,
 				161AF8592C6417E800854037 /* Base in Resources */,
-				161AF8542C6417E700854037 /* Base in Resources */,
+				161AF8942C6418AC00854037 /* draws.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +432,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				161AF8512C6417E700854037 /* ViewController.swift in Sources */,
+				161AF8B12C64205300854037 /* DomainResult.swift in Sources */,
+				161AF8982C6418AC00854037 /* Int+InWords.swift in Sources */,
+				161AF8992C6418AC00854037 /* String+Extensions.swift in Sources */,
+				161AF89E2C6418AC00854037 /* LotteryDrawListViewModel.swift in Sources */,
+				161AF89D2C6418AC00854037 /* LotteryDrawListView.swift in Sources */,
+				161AF8832C64189D00854037 /* LotteryDrawCoordinator.swift in Sources */,
+				161AF8B22C64205300854037 /* ClientError.swift in Sources */,
+				161AF89A2C6418AC00854037 /* LotteryDrawItemView.swift in Sources */,
+				161AF8962C6418AC00854037 /* DeveloperPreview.swift in Sources */,
+				161AF8A32C6418B300854037 /* NetworkLotteryDataService.swift in Sources */,
+				161AF8972C6418AC00854037 /* LotteryDraw.swift in Sources */,
 				161AF84D2C6417E700854037 /* AppDelegate.swift in Sources */,
+				161AF8B02C64205300854037 /* Features.swift in Sources */,
+				161AF8822C64189D00854037 /* Coordinator.swift in Sources */,
+				161AF8952C6418AC00854037 /* AppConstants.swift in Sources */,
+				161AF8A22C6418B300854037 /* MockLotteryDataService.swift in Sources */,
+				161AF8AC2C64202600854037 /* StateModel.swift in Sources */,
 				161AF84F2C6417E700854037 /* SceneDelegate.swift in Sources */,
+				161AF89C2C6418AC00854037 /* LotteryDrawItemViewModel.swift in Sources */,
+				161AF89B2C6418AC00854037 /* LotteryDrawView.swift in Sources */,
+				161AF87E2C64188800854037 /* ApplicationCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +489,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		161AF8522C6417E700854037 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				161AF8532C6417E700854037 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		161AF8572C6417E800854037 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -443,10 +627,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SuperLotto/Info.plist;
+				INFOPLIST_FILE = SuperLotto/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -470,10 +654,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SuperLotto/Info.plist;
+				INFOPLIST_FILE = SuperLotto/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
