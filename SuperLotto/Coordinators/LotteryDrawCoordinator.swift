@@ -16,6 +16,18 @@ final class LotteryDrawCoordinator: Coordinator {
 
     func start() {
         let lotteryDrawListViewModel = LotteryDrawListViewModel()
+        lotteryDrawListViewModel.output
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] outputValue in
+                switch outputValue {
+                case .itemSelected(let itemId, let allDraws):
+                    // Handle the extracted values here
+                    print("Item ID: \(itemId)")
+                    print("All Draws: \(allDraws)")
+                }
+            }
+            .store(in: &cancellables)
+
         let lotteryDrawListViewController = UIHostingController(
             rootView: LotteryDrawListView(
                 viewModel: lotteryDrawListViewModel

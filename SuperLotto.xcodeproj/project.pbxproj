@@ -261,7 +261,7 @@
 		161AF8A52C641E0400854037 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				161AF8B62C64299800854037 /* ErrorPopupView.swift */,
+				161AF8BE2C6431E600854037 /* UIComponents */,
 				161AF8932C6418AB00854037 /* DrawList */,
 			);
 			path = Screens;
@@ -311,6 +311,14 @@
 				161AF8AB2C64202600854037 /* StateModel.swift */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		161AF8BE2C6431E600854037 /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				161AF8B62C64299800854037 /* ErrorPopupView.swift */,
+			);
+			path = UIComponents;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

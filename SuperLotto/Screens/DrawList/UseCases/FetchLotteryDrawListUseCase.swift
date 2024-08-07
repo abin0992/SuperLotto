@@ -9,25 +9,24 @@ import Combine
 import Foundation
 
 protocol FetchLotteryDrawListUseCaseProtocol {
-    func execute() -> AnyPublisher<DomainResult<[LotteryDrawItemViewModel]>, Never>
+    func execute() -> AnyPublisher<DomainResult<[LotteryDraw]>, Never>
 }
 
 final class FetchLotteryDrawListUseCase: FetchLotteryDrawListUseCaseProtocol {
 
     private let lotteryDrawService: LotteryDrawResultFetchable
 
-    init(lotteryDrawService: LotteryDrawResultFetchable = MockLotteryDataService()) {
+    init(
+        lotteryDrawService: LotteryDrawResultFetchable = MockLotteryDataService()
+    ) {
         self.lotteryDrawService = lotteryDrawService
     }
 
-    func execute() -> AnyPublisher<DomainResult<[LotteryDrawItemViewModel]>, Never> {
+    func execute() -> AnyPublisher<DomainResult<[LotteryDraw]>, Never> {
         lotteryDrawService
             .fetchLotteryDraws()
             .receive(on: DispatchQueue.main)
-            .map { lotteryDraws in
-                lotteryDraws.map { LotteryDrawItemViewModel(lotteryDraw: $0) }
-            }
-            .map(DomainResult<[LotteryDrawItemViewModel]>.success)
+            .map(DomainResult<[LotteryDraw]>.success)
             .catch { error in
                 Just(.error(error))
             }
@@ -37,9 +36,9 @@ final class FetchLotteryDrawListUseCase: FetchLotteryDrawListUseCaseProtocol {
 
 // MARK: For preview
 final class PreviewFetchLotteryDrawListUseCase: FetchLotteryDrawListUseCaseProtocol {
-    func execute() -> AnyPublisher<DomainResult<[LotteryDrawItemViewModel]>, Never> {
-        Just([LotteryDrawItemViewModel(lotteryDraw: DeveloperPreview.instance.lotteryDraw)])
-            .map(DomainResult<[LotteryDrawItemViewModel]>.success)
+    func execute() -> AnyPublisher<DomainResult<[LotteryDraw]>, Never> {
+        Just([DeveloperPreview.instance.lotteryDraw])
+            .map(DomainResult<[LotteryDraw]>.success)
             .eraseToAnyPublisher()
     }
 }
