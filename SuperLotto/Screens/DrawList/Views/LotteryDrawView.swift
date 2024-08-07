@@ -9,7 +9,7 @@ import SwiftUI
 
 struct LotteryDrawView: View {
     let draw: LotteryDraw
-    
+
     var body: some View {
         VStack(alignment: .leading) {
             Text("Draw Date: \(draw.drawDate)")
@@ -25,5 +25,5 @@ struct LotteryDrawView: View {
 }
 
 #Preview {
-    LotteryDrawView(draw: DeveloperPreview.lotteryDraw)
+    LotteryDrawView(draw: DeveloperPreview.instance.lotteryDraw)
 }

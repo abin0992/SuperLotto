@@ -8,5 +8,5 @@
 import Foundation
 
 enum Features {
-    static let isCryptoDetailScreenEnabled = true
+    static let isDrawDetailScreenEnabled = true
 }

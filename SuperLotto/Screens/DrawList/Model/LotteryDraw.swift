@@ -18,7 +18,7 @@ struct LotteryDraw: Decodable, Identifiable {
     let number6: String
     let bonusBall: String
     let topPrize: Int
-    
+
     private enum CodingKeys: String, CodingKey {
         case id
         case drawDate

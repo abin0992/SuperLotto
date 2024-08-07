@@ -15,7 +15,12 @@ final class LotteryDrawCoordinator: Coordinator {
     private var cancellables = Set<AnyCancellable>()
 
     func start() {
-        let lotteryDrawListViewController = UIHostingController(rootView: LotteryDrawListView())
+        let lotteryDrawListViewModel = LotteryDrawListViewModel()
+        let lotteryDrawListViewController = UIHostingController(
+            rootView: LotteryDrawListView(
+                viewModel: lotteryDrawListViewModel
+            )
+        )
         rootViewController.navigationBar.prefersLargeTitles = true
         rootViewController.setViewControllers(
             [lotteryDrawListViewController],

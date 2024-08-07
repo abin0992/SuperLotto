@@ -9,7 +9,7 @@ import SwiftUI
 
 struct LotteryDrawItemView: View {
     let viewModel: LotteryDrawItemViewModel
-    
+
     var body: some View {
         VStack(alignment: .leading, spacing: Margin.small) {
             Label("\(viewModel.drawDate)", systemImage: "calendar")

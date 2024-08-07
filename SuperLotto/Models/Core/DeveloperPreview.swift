@@ -7,8 +7,13 @@
 
 import Foundation
 
-struct DeveloperPreview {
-    static let lotteryDraw = LotteryDraw(
+final class DeveloperPreview {
+
+    static let instance = DeveloperPreview()
+
+    private init() {}
+
+    let lotteryDraw = LotteryDraw(
         id: "draw-1",
         drawDate: "2023-05-15",
         number1: "2",

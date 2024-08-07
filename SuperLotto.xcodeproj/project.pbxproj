@@ -28,12 +28,16 @@
 		161AF89C2C6418AC00854037 /* LotteryDrawItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF8902C6418AB00854037 /* LotteryDrawItemViewModel.swift */; };
 		161AF89D2C6418AC00854037 /* LotteryDrawListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF8912C6418AB00854037 /* LotteryDrawListView.swift */; };
 		161AF89E2C6418AC00854037 /* LotteryDrawListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF8922C6418AB00854037 /* LotteryDrawListViewModel.swift */; };
-		161AF8A22C6418B300854037 /* MockLotteryDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF89F2C6418B300854037 /* MockLotteryDataService.swift */; };
-		161AF8A32C6418B300854037 /* NetworkLotteryDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF8A02C6418B300854037 /* NetworkLotteryDataService.swift */; };
+		161AF8A32C6418B300854037 /* LotteryDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF8A02C6418B300854037 /* LotteryDataService.swift */; };
 		161AF8AC2C64202600854037 /* StateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF8AB2C64202600854037 /* StateModel.swift */; };
 		161AF8B02C64205300854037 /* Features.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF8AD2C64205300854037 /* Features.swift */; };
 		161AF8B12C64205300854037 /* DomainResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF8AE2C64205300854037 /* DomainResult.swift */; };
 		161AF8B22C64205300854037 /* ClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF8AF2C64205300854037 /* ClientError.swift */; };
+		161AF8B42C6421E600854037 /* FetchLotteryDrawListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF8B32C6421E600854037 /* FetchLotteryDrawListUseCase.swift */; };
+		161AF8B72C64299800854037 /* ErrorPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF8B62C64299800854037 /* ErrorPopupView.swift */; };
+		161AF8B92C642ABB00854037 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF8B82C642ABB00854037 /* Color+Extensions.swift */; };
+		161AF8BB2C642AFF00854037 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 161AF8BA2C642AFF00854037 /* Colors.xcassets */; };
+		161AF8BD2C64304200854037 /* MockLotteryDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF8BC2C64304200854037 /* MockLotteryDataService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,12 +83,16 @@
 		161AF8902C6418AB00854037 /* LotteryDrawItemViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LotteryDrawItemViewModel.swift; sourceTree = "<group>"; };
 		161AF8912C6418AB00854037 /* LotteryDrawListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LotteryDrawListView.swift; sourceTree = "<group>"; };
 		161AF8922C6418AB00854037 /* LotteryDrawListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LotteryDrawListViewModel.swift; sourceTree = "<group>"; };
-		161AF89F2C6418B300854037 /* MockLotteryDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockLotteryDataService.swift; sourceTree = "<group>"; };
-		161AF8A02C6418B300854037 /* NetworkLotteryDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkLotteryDataService.swift; sourceTree = "<group>"; };
+		161AF8A02C6418B300854037 /* LotteryDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LotteryDataService.swift; sourceTree = "<group>"; };
 		161AF8AB2C64202600854037 /* StateModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateModel.swift; sourceTree = "<group>"; };
 		161AF8AD2C64205300854037 /* Features.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Features.swift; sourceTree = "<group>"; };
 		161AF8AE2C64205300854037 /* DomainResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DomainResult.swift; sourceTree = "<group>"; };
 		161AF8AF2C64205300854037 /* ClientError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientError.swift; sourceTree = "<group>"; };
+		161AF8B32C6421E600854037 /* FetchLotteryDrawListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchLotteryDrawListUseCase.swift; sourceTree = "<group>"; };
+		161AF8B62C64299800854037 /* ErrorPopupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorPopupView.swift; sourceTree = "<group>"; };
+		161AF8B82C642ABB00854037 /* Color+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
+		161AF8BA2C642AFF00854037 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		161AF8BC2C64304200854037 /* MockLotteryDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockLotteryDataService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,6 +212,7 @@
 		161AF88C2C6418AB00854037 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				161AF8B82C642ABB00854037 /* Color+Extensions.swift */,
 				161AF88A2C6418AB00854037 /* Int+InWords.swift */,
 				161AF88B2C6418AB00854037 /* String+Extensions.swift */,
 			);
@@ -234,8 +243,8 @@
 		161AF8A12C6418B300854037 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				161AF89F2C6418B300854037 /* MockLotteryDataService.swift */,
-				161AF8A02C6418B300854037 /* NetworkLotteryDataService.swift */,
+				161AF8BC2C64304200854037 /* MockLotteryDataService.swift */,
+				161AF8A02C6418B300854037 /* LotteryDataService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -244,6 +253,7 @@
 			isa = PBXGroup;
 			children = (
 				161AF8552C6417E800854037 /* Assets.xcassets */,
+				161AF8BA2C642AFF00854037 /* Colors.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -251,6 +261,7 @@
 		161AF8A52C641E0400854037 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				161AF8B62C64299800854037 /* ErrorPopupView.swift */,
 				161AF8932C6418AB00854037 /* DrawList */,
 			);
 			path = Screens;
@@ -284,6 +295,7 @@
 		161AF8A92C641F3B00854037 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				161AF8B32C6421E600854037 /* FetchLotteryDrawListUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -311,6 +323,7 @@
 				161AF8452C6417E700854037 /* Sources */,
 				161AF8462C6417E700854037 /* Frameworks */,
 				161AF8472C6417E700854037 /* Resources */,
+				161AF8B52C64229400854037 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -406,6 +419,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				161AF8562C6417E800854037 /* Assets.xcassets in Resources */,
+				161AF8BB2C642AFF00854037 /* Colors.xcassets in Resources */,
 				161AF8592C6417E800854037 /* Base in Resources */,
 				161AF8942C6418AC00854037 /* draws.json in Resources */,
 			);
@@ -427,6 +441,27 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		161AF8B52C64229400854037 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		161AF8452C6417E700854037 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -441,18 +476,21 @@
 				161AF8B22C64205300854037 /* ClientError.swift in Sources */,
 				161AF89A2C6418AC00854037 /* LotteryDrawItemView.swift in Sources */,
 				161AF8962C6418AC00854037 /* DeveloperPreview.swift in Sources */,
-				161AF8A32C6418B300854037 /* NetworkLotteryDataService.swift in Sources */,
+				161AF8A32C6418B300854037 /* LotteryDataService.swift in Sources */,
 				161AF8972C6418AC00854037 /* LotteryDraw.swift in Sources */,
+				161AF8B92C642ABB00854037 /* Color+Extensions.swift in Sources */,
 				161AF84D2C6417E700854037 /* AppDelegate.swift in Sources */,
+				161AF8B42C6421E600854037 /* FetchLotteryDrawListUseCase.swift in Sources */,
 				161AF8B02C64205300854037 /* Features.swift in Sources */,
 				161AF8822C64189D00854037 /* Coordinator.swift in Sources */,
 				161AF8952C6418AC00854037 /* AppConstants.swift in Sources */,
-				161AF8A22C6418B300854037 /* MockLotteryDataService.swift in Sources */,
+				161AF8B72C64299800854037 /* ErrorPopupView.swift in Sources */,
 				161AF8AC2C64202600854037 /* StateModel.swift in Sources */,
 				161AF84F2C6417E700854037 /* SceneDelegate.swift in Sources */,
 				161AF89C2C6418AC00854037 /* LotteryDrawItemViewModel.swift in Sources */,
 				161AF89B2C6418AC00854037 /* LotteryDrawView.swift in Sources */,
 				161AF87E2C64188800854037 /* ApplicationCoordinator.swift in Sources */,
+				161AF8BD2C64304200854037 /* MockLotteryDataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -537,7 +575,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -600,7 +638,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

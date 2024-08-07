@@ -5,8 +5,8 @@
 //  Created by Abin Baby on 07/08/2024.
 //
 
-import Foundation
 import Combine
+import Foundation
 
 enum LotteryDrawListOutput {
     case itemSelected(LotteryDraw)
@@ -19,26 +19,56 @@ final class LotteryDrawListViewModel: ObservableObject {
     @Published var state = StateModel<[LotteryDrawItemViewModel]>.State.loading
 
     let didTapRetry = PassthroughSubject<Void, Never>()
+    let didSelectDrawItem = PassthroughSubject<LotteryDrawItemViewModel, Never>()
     let refreshDrawResults = PassthroughSubject<Void, Never>()
 
-    @Published var lotteryDraws: [LotteryDraw] = []
+    private lazy var fetchLotteryDrawListResult = makeInitialResultsFetchResult()
+        .share()
 
-    private let lotteryDataService: LotteryDataServiceProtocol
+    private let fetchLotteryDrawListUseCase: FetchLotteryDrawListUseCaseProtocol
 
-    init(lotteryDataService: LotteryDataServiceProtocol = MockLotteryDataService()) {
-        self.lotteryDataService = lotteryDataService
+    init(fetchLotteryDrawListUseCase: FetchLotteryDrawListUseCaseProtocol = FetchLotteryDrawListUseCase()) {
+        self.fetchLotteryDrawListUseCase = fetchLotteryDrawListUseCase
+        setUpBindings()
+    }
+}
+
+private extension LotteryDrawListViewModel {
+
+    func setUpBindings() {
+        bindState()
     }
 
-    func fetchLotteryDraws() {
-        lotteryDataService.fetchLotteryDraws { result in
-            DispatchQueue.main.async {
+    func bindState() {
+        fetchLotteryDrawListResult
+            .receive(on: DispatchQueue.main)
+            .map { result -> StateModel<[LotteryDrawItemViewModel]>.State in
                 switch result {
-                case .success(let lotteryDraws):
-                    self.lotteryDraws = lotteryDraws
-                case .failure(let error):
-                    print("Error fetching lottery draws: \(error)")
+                case .error:
+                    return .error(ClientError.generic)
+                case .success(let lotteryDrawItems):
+                    return .data(lotteryDrawItems)
                 }
             }
+            .assign(to: &$state)
+
+        Publishers.Merge(
+            didTapRetry,
+            refreshDrawResults
+        )
+            .map { .loading }
+            .assign(to: &$state)
+    }
+
+    func makeInitialResultsFetchResult() -> AnyPublisher<DomainResult<[LotteryDrawItemViewModel]>, Never> {
+        Publishers.Merge3(
+            Just<Void>(()),
+            didTapRetry,
+            refreshDrawResults
+        )
+        .flatMap { [fetchLotteryDrawListUseCase] _ -> AnyPublisher<DomainResult<[LotteryDrawItemViewModel]>, Never> in
+            fetchLotteryDrawListUseCase.execute()
         }
+        .eraseToAnyPublisher()
     }
 }
