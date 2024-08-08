@@ -11,7 +11,6 @@
 		161AF84F2C6417E700854037 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF84E2C6417E700854037 /* SceneDelegate.swift */; };
 		161AF8562C6417E800854037 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 161AF8552C6417E800854037 /* Assets.xcassets */; };
 		161AF8592C6417E800854037 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 161AF8582C6417E800854037 /* Base */; };
-		161AF8642C6417E800854037 /* SuperLottoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF8632C6417E800854037 /* SuperLottoTests.swift */; };
 		161AF86E2C6417E800854037 /* SuperLottoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF86D2C6417E800854037 /* SuperLottoUITests.swift */; };
 		161AF8702C6417E800854037 /* SuperLottoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF86F2C6417E800854037 /* SuperLottoUITestsLaunchTests.swift */; };
 		161AF87E2C64188800854037 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF87D2C64188800854037 /* ApplicationCoordinator.swift */; };
@@ -40,6 +39,12 @@
 		161AF8BD2C64304200854037 /* MockLotteryDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF8BC2C64304200854037 /* MockLotteryDataService.swift */; };
 		161AF8C12C6541C200854037 /* LotteryDrawRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF8C02C6541C200854037 /* LotteryDrawRepository.swift */; };
 		161AF8C42C65441D00854037 /* ReachabilityChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF8C32C65441D00854037 /* ReachabilityChecker.swift */; };
+		161AF8C72C655CB500854037 /* LotteryDrawTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF8C62C655CB500854037 /* LotteryDrawTests.swift */; };
+		161AF8CA2C655D0B00854037 /* TestUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF8C82C655D0B00854037 /* TestUtilities.swift */; };
+		161AF8CD2C655D3D00854037 /* draws.json in Resources */ = {isa = PBXBuildFile; fileRef = 161AF8CC2C655D3D00854037 /* draws.json */; };
+		161AF8D12C655FB800854037 /* MockReachabilityChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF8D02C655FB800854037 /* MockReachabilityChecker.swift */; };
+		161AF8D32C65622A00854037 /* MockFetchLotteryDrawListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF8D22C65622A00854037 /* MockFetchLotteryDrawListUseCase.swift */; };
+		161AF8D52C65630B00854037 /* LotteryDrawListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF8D42C65630B00854037 /* LotteryDrawListViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,7 +72,6 @@
 		161AF8582C6417E800854037 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		161AF85A2C6417E800854037 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		161AF85F2C6417E800854037 /* SuperLottoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SuperLottoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		161AF8632C6417E800854037 /* SuperLottoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperLottoTests.swift; sourceTree = "<group>"; };
 		161AF8692C6417E800854037 /* SuperLottoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SuperLottoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		161AF86D2C6417E800854037 /* SuperLottoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperLottoUITests.swift; sourceTree = "<group>"; };
 		161AF86F2C6417E800854037 /* SuperLottoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperLottoUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -97,6 +101,12 @@
 		161AF8BC2C64304200854037 /* MockLotteryDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockLotteryDataService.swift; sourceTree = "<group>"; };
 		161AF8C02C6541C200854037 /* LotteryDrawRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryDrawRepository.swift; sourceTree = "<group>"; };
 		161AF8C32C65441D00854037 /* ReachabilityChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityChecker.swift; sourceTree = "<group>"; };
+		161AF8C62C655CB500854037 /* LotteryDrawTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryDrawTests.swift; sourceTree = "<group>"; };
+		161AF8C82C655D0B00854037 /* TestUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestUtilities.swift; sourceTree = "<group>"; };
+		161AF8CC2C655D3D00854037 /* draws.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = draws.json; sourceTree = "<group>"; };
+		161AF8D02C655FB800854037 /* MockReachabilityChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockReachabilityChecker.swift; sourceTree = "<group>"; };
+		161AF8D22C65622A00854037 /* MockFetchLotteryDrawListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFetchLotteryDrawListUseCase.swift; sourceTree = "<group>"; };
+		161AF8D42C65630B00854037 /* LotteryDrawListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryDrawListViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,7 +173,11 @@
 		161AF8622C6417E800854037 /* SuperLottoTests */ = {
 			isa = PBXGroup;
 			children = (
-				161AF8632C6417E800854037 /* SuperLottoTests.swift */,
+				161AF8CF2C655FAE00854037 /* Mocks */,
+				161AF8CE2C655ED500854037 /* ViewModelTests */,
+				161AF8CB2C655D2A00854037 /* Stubs */,
+				161AF8C92C655D0B00854037 /* TestUtilities */,
+				161AF8C52C655C7900854037 /* ModelTests */,
 			);
 			path = SuperLottoTests;
 			sourceTree = "<group>";
@@ -335,6 +349,47 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		161AF8C52C655C7900854037 /* ModelTests */ = {
+			isa = PBXGroup;
+			children = (
+				161AF8C62C655CB500854037 /* LotteryDrawTests.swift */,
+			);
+			path = ModelTests;
+			sourceTree = "<group>";
+		};
+		161AF8C92C655D0B00854037 /* TestUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				161AF8C82C655D0B00854037 /* TestUtilities.swift */,
+			);
+			path = TestUtilities;
+			sourceTree = "<group>";
+		};
+		161AF8CB2C655D2A00854037 /* Stubs */ = {
+			isa = PBXGroup;
+			children = (
+				161AF8CC2C655D3D00854037 /* draws.json */,
+			);
+			path = Stubs;
+			sourceTree = "<group>";
+		};
+		161AF8CE2C655ED500854037 /* ViewModelTests */ = {
+			isa = PBXGroup;
+			children = (
+				161AF8D42C65630B00854037 /* LotteryDrawListViewModelTests.swift */,
+			);
+			path = ViewModelTests;
+			sourceTree = "<group>";
+		};
+		161AF8CF2C655FAE00854037 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				161AF8D02C655FB800854037 /* MockReachabilityChecker.swift */,
+				161AF8D22C65622A00854037 /* MockFetchLotteryDrawListUseCase.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -407,6 +462,7 @@
 					};
 					161AF85E2C6417E800854037 = {
 						CreatedOnToolsVersion = 15.4;
+						LastSwiftMigration = 1540;
 						TestTargetID = 161AF8482C6417E700854037;
 					};
 					161AF8682C6417E800854037 = {
@@ -451,6 +507,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				161AF8CD2C655D3D00854037 /* draws.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -522,7 +579,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				161AF8642C6417E800854037 /* SuperLottoTests.swift in Sources */,
+				161AF8CA2C655D0B00854037 /* TestUtilities.swift in Sources */,
+				161AF8C72C655CB500854037 /* LotteryDrawTests.swift in Sources */,
+				161AF8D32C65622A00854037 /* MockFetchLotteryDrawListUseCase.swift in Sources */,
+				161AF8D52C65630B00854037 /* LotteryDrawListViewModelTests.swift in Sources */,
+				161AF8D12C655FB800854037 /* MockReachabilityChecker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -740,6 +801,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -748,6 +810,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.abin.dev.SuperLottoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SuperLotto.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SuperLotto";
@@ -759,6 +822,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;

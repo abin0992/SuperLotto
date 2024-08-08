@@ -9,6 +9,29 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>SuperLottoTests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>161AF8482C6417E700854037</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>161AF85E2C6417E800854037</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>161AF8682C6417E800854037</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 	</dict>
 </dict>
 </plist>

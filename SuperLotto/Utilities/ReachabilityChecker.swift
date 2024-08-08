@@ -13,7 +13,12 @@ enum NetworkStatus: String {
     case disconnected
 }
 
-final class ReachabilityChecker: ObservableObject {
+protocol NetworkReachabilityProtocol {
+    var isConnected: Bool { get }
+    var statusPublisher: AnyPublisher<NetworkStatus, Never> { get }
+}
+
+final class ReachabilityChecker: ObservableObject, NetworkReachabilityProtocol {
     private let monitor = NWPathMonitor()
     private let queue = DispatchQueue(label: "Network Monitor")
 
@@ -34,5 +39,9 @@ final class ReachabilityChecker: ObservableObject {
 
     var isConnected: Bool {
         status == .connected
+    }
+
+    var statusPublisher: AnyPublisher<NetworkStatus, Never> {
+        $status.eraseToAnyPublisher()
     }
 }

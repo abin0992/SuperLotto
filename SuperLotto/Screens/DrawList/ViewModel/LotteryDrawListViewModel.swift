@@ -28,14 +28,16 @@ final class LotteryDrawListViewModel: ObservableObject {
         .share()
 
     private var cancellables = Set<AnyCancellable>()
-    private let rechabilityChecker = ReachabilityChecker()
 
+    private let reachabilityChecker: NetworkReachabilityProtocol
     private let fetchLotteryDrawListUseCase: FetchLotteryDrawListUseCaseProtocol
 
     init(
-        fetchLotteryDrawListUseCase: FetchLotteryDrawListUseCaseProtocol = FetchLotteryDrawListUseCase()
+        fetchLotteryDrawListUseCase: FetchLotteryDrawListUseCaseProtocol = FetchLotteryDrawListUseCase(),
+        reachabilityChecker: NetworkReachabilityProtocol = ReachabilityChecker()
     ) {
         self.fetchLotteryDrawListUseCase = fetchLotteryDrawListUseCase
+        self.reachabilityChecker = reachabilityChecker
         setUpBindings()
     }
 }
@@ -45,32 +47,8 @@ private extension LotteryDrawListViewModel {
     func setUpBindings() {
         bindState()
         bindNetworkConnectionCheck()
-
-        fetchLotteryDrawListResult
-            .compactMap { result in
-                switch result {
-                case .error:
-                    return nil
-                case .success(let lotteryDrawItems):
-                    return lotteryDrawItems
-                }
-            }
-            .assign(to: &$lotteryDraws)
-
-        didSelectDrawItem
-            .sink { [weak self] selectedDrawItem in
-                guard let self else {
-                    return
-                }
-                self.output.send(
-                    LotteryDrawListOutput.itemSelected(
-                        itemId: selectedDrawItem.id,
-                        allDraws: self.lotteryDraws
-                    )
-                )
-            }
-            .store(in: &cancellables)
-
+        bindLotteryDraws()
+        bindDidSelectDraw()
     }
 
     func bindState() {
@@ -97,11 +75,41 @@ private extension LotteryDrawListViewModel {
     }
 
     func bindNetworkConnectionCheck() {
-        rechabilityChecker.$status
+        reachabilityChecker.statusPublisher
+            .receive(on: DispatchQueue.main)
             .map { $0 == .connected }
             .assign(to: &$isConnected)
 
         // TODO: when "isConnected" fetch new data if necessery. 
+    }
+
+    func bindLotteryDraws() {
+        fetchLotteryDrawListResult
+            .compactMap { result in
+                switch result {
+                case .error:
+                    return nil
+                case .success(let lotteryDrawItems):
+                    return lotteryDrawItems
+                }
+            }
+            .assign(to: &$lotteryDraws)
+    }
+
+    func bindDidSelectDraw() {
+        didSelectDrawItem
+            .sink { [weak self] selectedDrawItem in
+                guard let self else {
+                    return
+                }
+                self.output.send(
+                    LotteryDrawListOutput.itemSelected(
+                        itemId: selectedDrawItem.id,
+                        allDraws: self.lotteryDraws
+                    )
+                )
+            }
+            .store(in: &cancellables)
     }
 
     func makeLotteryDrawFetchResult() -> AnyPublisher<DomainResult<[LotteryDraw]>, Never> {
