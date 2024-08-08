@@ -14,17 +14,17 @@ protocol FetchLotteryDrawListUseCaseProtocol {
 
 final class FetchLotteryDrawListUseCase: FetchLotteryDrawListUseCaseProtocol {
 
-    private let lotteryDrawService: LotteryDrawResultFetchable
+    private let lotteryDrawRepository: LotteryDrawRepositoryProtocol
 
     init(
-        lotteryDrawService: LotteryDrawResultFetchable = MockLotteryDataService()
+        lotteryDrawRepository: LotteryDrawRepositoryProtocol = LotteryDrawRepository()
     ) {
-        self.lotteryDrawService = lotteryDrawService
+        self.lotteryDrawRepository = lotteryDrawRepository
     }
 
     func execute() -> AnyPublisher<DomainResult<[LotteryDraw]>, Never> {
-        lotteryDrawService
-            .fetchLotteryDraws()
+        lotteryDrawRepository
+            .getLotteryDraws()
             .receive(on: DispatchQueue.main)
             .map(DomainResult<[LotteryDraw]>.success)
             .catch { error in

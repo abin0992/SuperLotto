@@ -34,6 +34,18 @@ struct LotteryDrawListView: View {
             default:
                 VStack {}
             }
+
+            if !viewModel.isConnected {
+                VStack {
+                    Spacer()
+                    Text("You are currently offline. Data is being loaded from local cache.")
+                        .foregroundColor(.secondary)
+                        .padding()
+                        .background(Color.white)
+                        .cornerRadius(10)
+                        .shadow(radius: 5)
+                }
+            }
         }
         .navigationBarTitle("Lottery draws")
         .navigationBarBackButtonHidden(true)
@@ -45,6 +57,7 @@ private extension LotteryDrawListView {
         List {
             ForEach(lotteryDraws) { lotteryDraw in
                 LotteryDrawItemView(viewModel: lotteryDraw)
+                    .listRowSeparator(.hidden)
                     .listRowInsets(
                         .init(
                             top: 10,
@@ -57,7 +70,6 @@ private extension LotteryDrawListView {
                             viewModel.didSelectDrawItem.send(lotteryDraw)
                         }
                     }
-                    .listRowBackground(Color.theme.background)
             }
         }
         .scrollContentBackground(.hidden)

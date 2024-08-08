@@ -11,14 +11,28 @@ struct LotteryDrawItemView: View {
     let viewModel: LotteryDrawItemViewModel
 
     var body: some View {
-        VStack(alignment: .leading, spacing: Margin.small) {
-            Label("\(viewModel.drawDate)", systemImage: "calendar")
-                .font(.headline)
-                .foregroundColor(.black)
-            Text("Prize Amount: \(viewModel.topPrize)")
-                .font(.subheadline)
+        HStack {
+            Image(systemName: "calendar")
+                .resizable()
+                .frame(width: 24, height: 24)
+                .padding(.trailing, 12)
+
+            VStack(alignment: .leading) {
+                Text("\(viewModel.drawDate)")
+                    .font(.headline)
+                    .fontWeight(.bold)
+
+                Text("Prize Amount: \(viewModel.topPrize.capitalized)")
+                    .font(.subheadline)
+                    .foregroundColor(.secondary)
+            }
+
+            Spacer()
         }
         .padding()
+        .background(Color.white)
+        .cornerRadius(10)
+        .shadow(color: Color.black.opacity(0.1), radius: 5, x: 0, y: 5)
     }
 }
 

@@ -17,6 +17,7 @@ final class LotteryDrawListViewModel: ObservableObject {
     let output = PassthroughSubject<LotteryDrawListOutput, Never>()
 
     @Published var state = StateModel<[LotteryDrawItemViewModel]>.State.loading
+    @Published var isConnected = false
     @Published private var lotteryDraws = [LotteryDraw]()
 
     let didTapRetry = PassthroughSubject<Void, Never>()
@@ -27,6 +28,8 @@ final class LotteryDrawListViewModel: ObservableObject {
         .share()
 
     private var cancellables = Set<AnyCancellable>()
+    private let rechabilityChecker = ReachabilityChecker()
+
     private let fetchLotteryDrawListUseCase: FetchLotteryDrawListUseCaseProtocol
 
     init(
@@ -41,6 +44,7 @@ private extension LotteryDrawListViewModel {
 
     func setUpBindings() {
         bindState()
+        bindNetworkConnectionCheck()
 
         fetchLotteryDrawListResult
             .compactMap { result in
@@ -66,6 +70,7 @@ private extension LotteryDrawListViewModel {
                 )
             }
             .store(in: &cancellables)
+
     }
 
     func bindState() {
@@ -89,6 +94,14 @@ private extension LotteryDrawListViewModel {
         )
             .map { .loading }
             .assign(to: &$state)
+    }
+
+    func bindNetworkConnectionCheck() {
+        rechabilityChecker.$status
+            .map { $0 == .connected }
+            .assign(to: &$isConnected)
+
+        // TODO: when "isConnected" fetch new data if necessery. 
     }
 
     func makeLotteryDrawFetchResult() -> AnyPublisher<DomainResult<[LotteryDraw]>, Never> {

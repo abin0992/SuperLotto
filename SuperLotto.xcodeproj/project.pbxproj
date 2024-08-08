@@ -38,6 +38,8 @@
 		161AF8B92C642ABB00854037 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF8B82C642ABB00854037 /* Color+Extensions.swift */; };
 		161AF8BB2C642AFF00854037 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 161AF8BA2C642AFF00854037 /* Colors.xcassets */; };
 		161AF8BD2C64304200854037 /* MockLotteryDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF8BC2C64304200854037 /* MockLotteryDataService.swift */; };
+		161AF8C12C6541C200854037 /* LotteryDrawRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF8C02C6541C200854037 /* LotteryDrawRepository.swift */; };
+		161AF8C42C65441D00854037 /* ReachabilityChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF8C32C65441D00854037 /* ReachabilityChecker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +95,8 @@
 		161AF8B82C642ABB00854037 /* Color+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
 		161AF8BA2C642AFF00854037 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		161AF8BC2C64304200854037 /* MockLotteryDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockLotteryDataService.swift; sourceTree = "<group>"; };
+		161AF8C02C6541C200854037 /* LotteryDrawRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryDrawRepository.swift; sourceTree = "<group>"; };
+		161AF8C32C65441D00854037 /* ReachabilityChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityChecker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +155,7 @@
 				161AF8A42C64194500854037 /* Resources */,
 				161AF8A52C641E0400854037 /* Screens */,
 				161AF8A12C6418B300854037 /* Service */,
+				161AF8C22C6543F600854037 /* Utilities */,
 			);
 			path = SuperLotto;
 			sourceTree = "<group>";
@@ -280,6 +285,7 @@
 			isa = PBXGroup;
 			children = (
 				161AF8882C6418AB00854037 /* LotteryDraw.swift */,
+				161AF8C02C6541C200854037 /* LotteryDrawRepository.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -319,6 +325,14 @@
 				161AF8B62C64299800854037 /* ErrorPopupView.swift */,
 			);
 			path = UIComponents;
+			sourceTree = "<group>";
+		};
+		161AF8C22C6543F600854037 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				161AF8C32C65441D00854037 /* ReachabilityChecker.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -477,6 +491,7 @@
 			files = (
 				161AF8B12C64205300854037 /* DomainResult.swift in Sources */,
 				161AF8982C6418AC00854037 /* Int+InWords.swift in Sources */,
+				161AF8C42C65441D00854037 /* ReachabilityChecker.swift in Sources */,
 				161AF8992C6418AC00854037 /* String+Extensions.swift in Sources */,
 				161AF89E2C6418AC00854037 /* LotteryDrawListViewModel.swift in Sources */,
 				161AF89D2C6418AC00854037 /* LotteryDrawListView.swift in Sources */,
@@ -487,6 +502,7 @@
 				161AF8A32C6418B300854037 /* LotteryDataService.swift in Sources */,
 				161AF8972C6418AC00854037 /* LotteryDraw.swift in Sources */,
 				161AF8B92C642ABB00854037 /* Color+Extensions.swift in Sources */,
+				161AF8C12C6541C200854037 /* LotteryDrawRepository.swift in Sources */,
 				161AF84D2C6417E700854037 /* AppDelegate.swift in Sources */,
 				161AF8B42C6421E600854037 /* FetchLotteryDrawListUseCase.swift in Sources */,
 				161AF8B02C64205300854037 /* Features.swift in Sources */,
