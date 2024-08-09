@@ -11,7 +11,7 @@ final class LotteryDrawDetailViewModel: ObservableObject {
 
     let didSelectDismissView = PassthroughSubject<Void, Never>()
 
-    @Published var lotteryDraws: [LotteryDraw] = []
+    @Published private(set) var lotteryDraws: [LotteryDraw] = []
     @Published var selectedTab: String
 
     init(

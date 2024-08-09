@@ -11,7 +11,7 @@ import SwiftUI
 
 final class LotteryDrawCoordinator: Coordinator {
 
-    var rootViewController: UINavigationController = UINavigationController()
+    private(set) var rootViewController: UINavigationController = UINavigationController()
     private var cancellables = Set<AnyCancellable>()
 
     func start() {

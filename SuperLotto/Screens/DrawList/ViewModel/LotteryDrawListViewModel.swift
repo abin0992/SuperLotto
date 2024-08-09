@@ -16,8 +16,8 @@ final class LotteryDrawListViewModel: ObservableObject {
 
     let output = PassthroughSubject<LotteryDrawListOutput, Never>()
 
-    @Published var state = StateModel<[LotteryDrawItemViewModel]>.State.loading
-    @Published var isConnected = false
+    @Published private(set) var state = StateModel<[LotteryDrawItemViewModel]>.State.loading
+    @Published private(set) var isConnected = false
     @Published private var lotteryDraws = [LotteryDraw]()
 
     let didTapRetry = PassthroughSubject<Void, Never>()

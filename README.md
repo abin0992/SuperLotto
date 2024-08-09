@@ -1,4 +1,4 @@
-[![Build](https://github.com/abin0992/CryptoLivePrice/actions/workflows/ci.yml/badge.svg)](https://github.com/abin0992/CryptoLivePrice/actions/workflows/ci.yml) 
+[![CI](https://github.com/abin0992/SuperLotto/actions/workflows/ci.yml/badge.svg)](https://github.com/abin0992/SuperLotto/actions/workflows/ci.yml)
 
 # Super Lotto
 
