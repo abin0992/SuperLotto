@@ -9,7 +9,7 @@ import Combine
 @testable import SuperLotto
 
 final class MockLotteryDrawResultFetchable: LotteryDrawResultFetchable {
-    
+
     var stubbedFetchLotteryDrawsResult: Result<[LotteryDraw], Error> = .success([])
 
     func fetchLotteryDraws() -> AnyPublisher<[LotteryDraw], Error> {

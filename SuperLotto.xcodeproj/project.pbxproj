@@ -49,6 +49,9 @@
 		161AF8DA2C657C9300854037 /* FetchLotteryDrawListUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF8D92C657C9300854037 /* FetchLotteryDrawListUseCaseTests.swift */; };
 		161AF8DE2C6695B200854037 /* LotteryDrawRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF8DD2C6695B200854037 /* LotteryDrawRepositoryTests.swift */; };
 		161AF8E02C6696CA00854037 /* MockLotteryDrawResultFetchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF8DF2C6696CA00854037 /* MockLotteryDrawResultFetchable.swift */; };
+		161AF8E32C66A61E00854037 /* LotteryDrawDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF8E22C66A61E00854037 /* LotteryDrawDetailViewModel.swift */; };
+		161AF8E52C66A73B00854037 /* LotteryDrawDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF8E42C66A73B00854037 /* LotteryDrawDetailView.swift */; };
+		161AF8E72C66B13400854037 /* NumberCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF8E62C66B13400854037 /* NumberCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +118,9 @@
 		161AF8D92C657C9300854037 /* FetchLotteryDrawListUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchLotteryDrawListUseCaseTests.swift; sourceTree = "<group>"; };
 		161AF8DD2C6695B200854037 /* LotteryDrawRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryDrawRepositoryTests.swift; sourceTree = "<group>"; };
 		161AF8DF2C6696CA00854037 /* MockLotteryDrawResultFetchable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLotteryDrawResultFetchable.swift; sourceTree = "<group>"; };
+		161AF8E22C66A61E00854037 /* LotteryDrawDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryDrawDetailViewModel.swift; sourceTree = "<group>"; };
+		161AF8E42C66A73B00854037 /* LotteryDrawDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryDrawDetailView.swift; sourceTree = "<group>"; };
+		161AF8E62C66B13400854037 /* NumberCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -290,6 +296,7 @@
 		161AF8A52C641E0400854037 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				161AF8E12C66A5C200854037 /* DrawDetail */,
 				161AF8BE2C6431E600854037 /* UIComponents */,
 				161AF8932C6418AB00854037 /* DrawList */,
 			);
@@ -347,6 +354,7 @@
 			isa = PBXGroup;
 			children = (
 				161AF8B62C64299800854037 /* ErrorPopupView.swift */,
+				161AF8E62C66B13400854037 /* NumberCardView.swift */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -416,6 +424,15 @@
 				161AF8DD2C6695B200854037 /* LotteryDrawRepositoryTests.swift */,
 			);
 			path = RepositoryTests;
+			sourceTree = "<group>";
+		};
+		161AF8E12C66A5C200854037 /* DrawDetail */ = {
+			isa = PBXGroup;
+			children = (
+				161AF8E22C66A61E00854037 /* LotteryDrawDetailViewModel.swift */,
+				161AF8E42C66A73B00854037 /* LotteryDrawDetailView.swift */,
+			);
+			path = DrawDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -584,8 +601,11 @@
 				161AF8B22C64205300854037 /* ClientError.swift in Sources */,
 				161AF89A2C6418AC00854037 /* LotteryDrawItemView.swift in Sources */,
 				161AF8962C6418AC00854037 /* DeveloperPreview.swift in Sources */,
+				161AF8E72C66B13400854037 /* NumberCardView.swift in Sources */,
+				161AF8E32C66A61E00854037 /* LotteryDrawDetailViewModel.swift in Sources */,
 				161AF8A32C6418B300854037 /* LotteryDataService.swift in Sources */,
 				161AF8972C6418AC00854037 /* LotteryDraw.swift in Sources */,
+				161AF8E52C66A73B00854037 /* LotteryDrawDetailView.swift in Sources */,
 				161AF8B92C642ABB00854037 /* Color+Extensions.swift in Sources */,
 				161AF8C12C6541C200854037 /* LotteryDrawRepository.swift in Sources */,
 				161AF84D2C6417E700854037 /* AppDelegate.swift in Sources */,

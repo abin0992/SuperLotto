@@ -20,10 +20,13 @@ final class LotteryDrawCoordinator: Coordinator {
             .receive(on: DispatchQueue.main)
             .sink { [weak self] outputValue in
                 switch outputValue {
-                case .itemSelected(let itemId, let allDraws):
-                    // Handle the extracted values here
-                    print("Item ID: \(itemId)")
-                    print("All Draws: \(allDraws)")
+                case let .itemSelected(itemId, allDraws):
+                    self?.presentDetailScreen(
+                        LotteryDrawDetailViewModel(
+                            selectedId: itemId,
+                            lotteryDraws: allDraws
+                        )
+                    )
                 }
             }
             .store(in: &cancellables)
@@ -38,5 +41,22 @@ final class LotteryDrawCoordinator: Coordinator {
             [lotteryDrawListViewController],
             animated: false
         )
+    }
+}
+
+private extension LotteryDrawCoordinator {
+
+    func presentDetailScreen(_ viewModel: LotteryDrawDetailViewModel) {
+
+        let drawDetailView = LotteryDrawDetailView(viewModel: viewModel)
+        let detailViewController = UIHostingController(rootView: drawDetailView)
+
+        viewModel.didSelectDismissView
+            .sink { _ in
+                detailViewController.dismiss(animated: true)
+            }
+            .store(in: &cancellables)
+
+        rootViewController.present(detailViewController, animated: true)
     }
 }

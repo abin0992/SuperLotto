@@ -12,7 +12,7 @@ struct LotteryDrawItemView: View {
 
     var body: some View {
         HStack {
-            Image(systemName: "calendar")
+            Image(systemName: "star.square.on.square.fill")
                 .resizable()
                 .frame(width: 24, height: 24)
                 .padding(.trailing, 12)
