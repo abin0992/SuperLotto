@@ -26,7 +26,10 @@ final class FetchLotteryDrawListUseCase: FetchLotteryDrawListUseCaseProtocol {
         lotteryDrawRepository
             .getLotteryDraws()
             .receive(on: DispatchQueue.main)
-            .map(DomainResult<[LotteryDraw]>.success)
+            .map { lotteryDraws -> DomainResult<[LotteryDraw]> in
+                let sortedDraws = lotteryDraws.sorted { $0.drawDate > $1.drawDate }
+                return .success(sortedDraws)
+            }
             .catch { error in
                 Just(.error(error))
             }

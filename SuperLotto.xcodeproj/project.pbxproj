@@ -60,13 +60,6 @@
 			remoteGlobalIDString = 161AF8482C6417E700854037;
 			remoteInfo = SuperLotto;
 		};
-		161AF86A2C6417E800854037 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 161AF8412C6417E700854037 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 161AF8482C6417E700854037;
-			remoteInfo = SuperLotto;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -77,7 +70,6 @@
 		161AF8582C6417E800854037 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		161AF85A2C6417E800854037 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		161AF85F2C6417E800854037 /* SuperLottoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SuperLottoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		161AF8692C6417E800854037 /* SuperLottoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SuperLottoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		161AF87D2C64188800854037 /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
 		161AF87F2C64189D00854037 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		161AF8802C64189D00854037 /* LotteryDrawCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LotteryDrawCoordinator.swift; sourceTree = "<group>"; };
@@ -134,13 +126,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		161AF8662C6417E800854037 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -158,7 +143,6 @@
 			children = (
 				161AF8492C6417E700854037 /* SuperLotto.app */,
 				161AF85F2C6417E800854037 /* SuperLottoTests.xctest */,
-				161AF8692C6417E800854037 /* SuperLottoUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -476,24 +460,6 @@
 			productReference = 161AF85F2C6417E800854037 /* SuperLottoTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		161AF8682C6417E800854037 /* SuperLottoUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 161AF8792C6417E800854037 /* Build configuration list for PBXNativeTarget "SuperLottoUITests" */;
-			buildPhases = (
-				161AF8652C6417E800854037 /* Sources */,
-				161AF8662C6417E800854037 /* Frameworks */,
-				161AF8672C6417E800854037 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				161AF86B2C6417E800854037 /* PBXTargetDependency */,
-			);
-			name = SuperLottoUITests;
-			productName = SuperLottoUITests;
-			productReference = 161AF8692C6417E800854037 /* SuperLottoUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -510,10 +476,6 @@
 					161AF85E2C6417E800854037 = {
 						CreatedOnToolsVersion = 15.4;
 						LastSwiftMigration = 1540;
-						TestTargetID = 161AF8482C6417E700854037;
-					};
-					161AF8682C6417E800854037 = {
-						CreatedOnToolsVersion = 15.4;
 						TestTargetID = 161AF8482C6417E700854037;
 					};
 				};
@@ -533,7 +495,6 @@
 			targets = (
 				161AF8482C6417E700854037 /* SuperLotto */,
 				161AF85E2C6417E800854037 /* SuperLottoTests */,
-				161AF8682C6417E800854037 /* SuperLottoUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -555,13 +516,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				161AF8CD2C655D3D00854037 /* draws.json in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		161AF8672C6417E800854037 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -641,13 +595,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		161AF8652C6417E800854037 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -655,11 +602,6 @@
 			isa = PBXTargetDependency;
 			target = 161AF8482C6417E700854037 /* SuperLotto */;
 			targetProxy = 161AF8602C6417E800854037 /* PBXContainerItemProxy */;
-		};
-		161AF86B2C6417E800854037 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 161AF8482C6417E700854037 /* SuperLotto */;
-			targetProxy = 161AF86A2C6417E800854037 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -889,40 +831,6 @@
 			};
 			name = Release;
 		};
-		161AF87A2C6417E800854037 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.abin.dev.SuperLottoUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = SuperLotto;
-			};
-			name = Debug;
-		};
-		161AF87B2C6417E800854037 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.abin.dev.SuperLottoUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = SuperLotto;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -949,15 +857,6 @@
 			buildConfigurations = (
 				161AF8772C6417E800854037 /* Debug */,
 				161AF8782C6417E800854037 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		161AF8792C6417E800854037 /* Build configuration list for PBXNativeTarget "SuperLottoUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				161AF87A2C6417E800854037 /* Debug */,
-				161AF87B2C6417E800854037 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

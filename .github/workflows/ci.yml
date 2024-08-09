@@ -24,7 +24,7 @@ jobs:
         xcode-version: latest-stable
 
     - name: Build app
-      run: xcodebuild -project 'CryptoPrice.xcodeproj' -scheme 'CryptoPrice' -destination 'generic/platform=iOS' -configuration Release build CODE_SIGNING_ALLOWED=NO | xcpretty
+      run: xcodebuild -project 'SuperLotto.xcodeproj' -scheme 'SuperLotto' -destination 'generic/platform=iOS' -configuration Release build CODE_SIGNING_ALLOWED=NO | xcpretty
 
   Test:
     runs-on: macos-latest
@@ -41,4 +41,4 @@ jobs:
 
     - name: Run tests
       if: steps.cache.outputs.cache-hit != 'true'
-      run: xcodebuild -project 'CryptoPrice.xcodeproj' -scheme 'CryptoPrice' -destination 'platform=iOS Simulator,name=iPhone 15 Pro' clean build-for-testing test | xcpretty
+      run: xcodebuild -project 'SuperLotto.xcodeproj' -scheme 'SuperLotto' -destination 'platform=iOS Simulator,name=iPhone 15 Pro' clean build-for-testing test | xcpretty
