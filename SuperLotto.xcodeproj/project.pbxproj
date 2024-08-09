@@ -259,7 +259,6 @@
 			children = (
 				161AF8A62C641E5E00854037 /* SubViews */,
 				161AF8912C6418AB00854037 /* LotteryDrawListView.swift */,
-				161AF88E2C6418AB00854037 /* LotteryDrawView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -429,10 +428,27 @@
 		161AF8E12C66A5C200854037 /* DrawDetail */ = {
 			isa = PBXGroup;
 			children = (
-				161AF8E22C66A61E00854037 /* LotteryDrawDetailViewModel.swift */,
-				161AF8E42C66A73B00854037 /* LotteryDrawDetailView.swift */,
+				161AF8E92C66BB6500854037 /* ViewModel */,
+				161AF8E82C66BB5900854037 /* View */,
 			);
 			path = DrawDetail;
+			sourceTree = "<group>";
+		};
+		161AF8E82C66BB5900854037 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				161AF8E42C66A73B00854037 /* LotteryDrawDetailView.swift */,
+				161AF88E2C6418AB00854037 /* LotteryDrawView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		161AF8E92C66BB6500854037 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				161AF8E22C66A61E00854037 /* LotteryDrawDetailViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
