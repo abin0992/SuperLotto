@@ -14,16 +14,18 @@ protocol LotteryDrawRepositoryProtocol {
 
 final class LotteryDrawRepository: LotteryDrawRepositoryProtocol {
 
-    private let reachabilityChecker = ReachabilityChecker()
+    private let reachabilityChecker: NetworkReachabilityProtocol
     private let networkLotteryDrawService: LotteryDrawResultFetchable
     private let localLotteryDrawService: LotteryDrawResultFetchable
 
     init(
         networkLotteryDrawService: LotteryDrawResultFetchable = MockLotteryDataService(),
-        localLotteryDrawService: LotteryDrawResultFetchable = MockLotteryDataService()
+        localLotteryDrawService: LotteryDrawResultFetchable = MockLotteryDataService(),
+        reachabilityChecker: NetworkReachabilityProtocol = ReachabilityChecker()
     ) {
         self.networkLotteryDrawService = networkLotteryDrawService
         self.localLotteryDrawService = localLotteryDrawService
+        self.reachabilityChecker = reachabilityChecker
     }
 
     func getLotteryDraws() -> AnyPublisher<[LotteryDraw], Error> {

@@ -45,6 +45,10 @@
 		161AF8D12C655FB800854037 /* MockReachabilityChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF8D02C655FB800854037 /* MockReachabilityChecker.swift */; };
 		161AF8D32C65622A00854037 /* MockFetchLotteryDrawListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF8D22C65622A00854037 /* MockFetchLotteryDrawListUseCase.swift */; };
 		161AF8D52C65630B00854037 /* LotteryDrawListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF8D42C65630B00854037 /* LotteryDrawListViewModelTests.swift */; };
+		161AF8D72C657BD100854037 /* MockLotteryDrawRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF8D62C657BD000854037 /* MockLotteryDrawRepository.swift */; };
+		161AF8DA2C657C9300854037 /* FetchLotteryDrawListUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF8D92C657C9300854037 /* FetchLotteryDrawListUseCaseTests.swift */; };
+		161AF8DE2C6695B200854037 /* LotteryDrawRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF8DD2C6695B200854037 /* LotteryDrawRepositoryTests.swift */; };
+		161AF8E02C6696CA00854037 /* MockLotteryDrawResultFetchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF8DF2C6696CA00854037 /* MockLotteryDrawResultFetchable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +111,10 @@
 		161AF8D02C655FB800854037 /* MockReachabilityChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockReachabilityChecker.swift; sourceTree = "<group>"; };
 		161AF8D22C65622A00854037 /* MockFetchLotteryDrawListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFetchLotteryDrawListUseCase.swift; sourceTree = "<group>"; };
 		161AF8D42C65630B00854037 /* LotteryDrawListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryDrawListViewModelTests.swift; sourceTree = "<group>"; };
+		161AF8D62C657BD000854037 /* MockLotteryDrawRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLotteryDrawRepository.swift; sourceTree = "<group>"; };
+		161AF8D92C657C9300854037 /* FetchLotteryDrawListUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchLotteryDrawListUseCaseTests.swift; sourceTree = "<group>"; };
+		161AF8DD2C6695B200854037 /* LotteryDrawRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryDrawRepositoryTests.swift; sourceTree = "<group>"; };
+		161AF8DF2C6696CA00854037 /* MockLotteryDrawResultFetchable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLotteryDrawResultFetchable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +181,8 @@
 		161AF8622C6417E800854037 /* SuperLottoTests */ = {
 			isa = PBXGroup;
 			children = (
+				161AF8DC2C66955D00854037 /* RepositoryTests */,
+				161AF8D82C657C7F00854037 /* UseCaseTests */,
 				161AF8CF2C655FAE00854037 /* Mocks */,
 				161AF8CE2C655ED500854037 /* ViewModelTests */,
 				161AF8CB2C655D2A00854037 /* Stubs */,
@@ -386,8 +396,26 @@
 			children = (
 				161AF8D02C655FB800854037 /* MockReachabilityChecker.swift */,
 				161AF8D22C65622A00854037 /* MockFetchLotteryDrawListUseCase.swift */,
+				161AF8D62C657BD000854037 /* MockLotteryDrawRepository.swift */,
+				161AF8DF2C6696CA00854037 /* MockLotteryDrawResultFetchable.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		161AF8D82C657C7F00854037 /* UseCaseTests */ = {
+			isa = PBXGroup;
+			children = (
+				161AF8D92C657C9300854037 /* FetchLotteryDrawListUseCaseTests.swift */,
+			);
+			path = UseCaseTests;
+			sourceTree = "<group>";
+		};
+		161AF8DC2C66955D00854037 /* RepositoryTests */ = {
+			isa = PBXGroup;
+			children = (
+				161AF8DD2C6695B200854037 /* LotteryDrawRepositoryTests.swift */,
+			);
+			path = RepositoryTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -583,7 +611,11 @@
 				161AF8C72C655CB500854037 /* LotteryDrawTests.swift in Sources */,
 				161AF8D32C65622A00854037 /* MockFetchLotteryDrawListUseCase.swift in Sources */,
 				161AF8D52C65630B00854037 /* LotteryDrawListViewModelTests.swift in Sources */,
+				161AF8E02C6696CA00854037 /* MockLotteryDrawResultFetchable.swift in Sources */,
+				161AF8DA2C657C9300854037 /* FetchLotteryDrawListUseCaseTests.swift in Sources */,
 				161AF8D12C655FB800854037 /* MockReachabilityChecker.swift in Sources */,
+				161AF8DE2C6695B200854037 /* LotteryDrawRepositoryTests.swift in Sources */,
+				161AF8D72C657BD100854037 /* MockLotteryDrawRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

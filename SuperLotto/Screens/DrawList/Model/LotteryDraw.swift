@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct LotteryDraw: Decodable, Identifiable {
+struct LotteryDraw: Decodable, Identifiable, Equatable {
     let id: String
     let drawDate: String
     let number1: String
