@@ -11,8 +11,6 @@
 		161AF84F2C6417E700854037 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF84E2C6417E700854037 /* SceneDelegate.swift */; };
 		161AF8562C6417E800854037 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 161AF8552C6417E800854037 /* Assets.xcassets */; };
 		161AF8592C6417E800854037 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 161AF8582C6417E800854037 /* Base */; };
-		161AF86E2C6417E800854037 /* SuperLottoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF86D2C6417E800854037 /* SuperLottoUITests.swift */; };
-		161AF8702C6417E800854037 /* SuperLottoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF86F2C6417E800854037 /* SuperLottoUITestsLaunchTests.swift */; };
 		161AF87E2C64188800854037 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF87D2C64188800854037 /* ApplicationCoordinator.swift */; };
 		161AF8822C64189D00854037 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF87F2C64189D00854037 /* Coordinator.swift */; };
 		161AF8832C64189D00854037 /* LotteryDrawCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF8802C64189D00854037 /* LotteryDrawCoordinator.swift */; };
@@ -80,8 +78,6 @@
 		161AF85A2C6417E800854037 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		161AF85F2C6417E800854037 /* SuperLottoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SuperLottoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		161AF8692C6417E800854037 /* SuperLottoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SuperLottoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		161AF86D2C6417E800854037 /* SuperLottoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperLottoUITests.swift; sourceTree = "<group>"; };
-		161AF86F2C6417E800854037 /* SuperLottoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperLottoUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		161AF87D2C64188800854037 /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
 		161AF87F2C64189D00854037 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		161AF8802C64189D00854037 /* LotteryDrawCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LotteryDrawCoordinator.swift; sourceTree = "<group>"; };
@@ -153,7 +149,6 @@
 			children = (
 				161AF84B2C6417E700854037 /* SuperLotto */,
 				161AF8622C6417E800854037 /* SuperLottoTests */,
-				161AF86C2C6417E800854037 /* SuperLottoUITests */,
 				161AF84A2C6417E700854037 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -174,7 +169,6 @@
 				161AF87C2C6417EE00854037 /* App */,
 				161AF8812C64189D00854037 /* Coordinators */,
 				161AF88C2C6418AB00854037 /* Extensions */,
-				161AF8852C6418AB00854037 /* MockData */,
 				161AF8892C6418AB00854037 /* Models */,
 				161AF8A42C64194500854037 /* Resources */,
 				161AF8A52C641E0400854037 /* Screens */,
@@ -187,24 +181,15 @@
 		161AF8622C6417E800854037 /* SuperLottoTests */ = {
 			isa = PBXGroup;
 			children = (
-				161AF8DC2C66955D00854037 /* RepositoryTests */,
-				161AF8D82C657C7F00854037 /* UseCaseTests */,
 				161AF8CF2C655FAE00854037 /* Mocks */,
-				161AF8CE2C655ED500854037 /* ViewModelTests */,
+				161AF8C52C655C7900854037 /* ModelTests */,
+				161AF8DC2C66955D00854037 /* RepositoryTests */,
 				161AF8CB2C655D2A00854037 /* Stubs */,
 				161AF8C92C655D0B00854037 /* TestUtilities */,
-				161AF8C52C655C7900854037 /* ModelTests */,
+				161AF8D82C657C7F00854037 /* UseCaseTests */,
+				161AF8CE2C655ED500854037 /* ViewModelTests */,
 			);
 			path = SuperLottoTests;
-			sourceTree = "<group>";
-		};
-		161AF86C2C6417E800854037 /* SuperLottoUITests */ = {
-			isa = PBXGroup;
-			children = (
-				161AF86D2C6417E800854037 /* SuperLottoUITests.swift */,
-				161AF86F2C6417E800854037 /* SuperLottoUITestsLaunchTests.swift */,
-			);
-			path = SuperLottoUITests;
 			sourceTree = "<group>";
 		};
 		161AF87C2C6417EE00854037 /* App */ = {
@@ -240,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				161AF8AA2C64201900854037 /* Core */,
+				161AF8852C6418AB00854037 /* MockData */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -266,9 +252,9 @@
 		161AF8932C6418AB00854037 /* DrawList */ = {
 			isa = PBXGroup;
 			children = (
+				161AF8A72C641E7A00854037 /* Model */,
 				161AF8A92C641F3B00854037 /* UseCases */,
 				161AF8A82C641E8F00854037 /* ViewModel */,
-				161AF8A72C641E7A00854037 /* Model */,
 				161AF88F2C6418AB00854037 /* Views */,
 			);
 			path = DrawList;
@@ -296,8 +282,8 @@
 			isa = PBXGroup;
 			children = (
 				161AF8E12C66A5C200854037 /* DrawDetail */,
-				161AF8BE2C6431E600854037 /* UIComponents */,
 				161AF8932C6418AB00854037 /* DrawList */,
+				161AF8BE2C6431E600854037 /* UIComponents */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -339,9 +325,9 @@
 		161AF8AA2C64201900854037 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				161AF8872C6418AB00854037 /* DeveloperPreview.swift */,
 				161AF8862C6418AB00854037 /* AppConstants.swift */,
 				161AF8AF2C64205300854037 /* ClientError.swift */,
+				161AF8872C6418AB00854037 /* DeveloperPreview.swift */,
 				161AF8AE2C64205300854037 /* DomainResult.swift */,
 				161AF8AD2C64205300854037 /* Features.swift */,
 				161AF8AB2C64202600854037 /* StateModel.swift */,
@@ -428,8 +414,8 @@
 		161AF8E12C66A5C200854037 /* DrawDetail */ = {
 			isa = PBXGroup;
 			children = (
-				161AF8E92C66BB6500854037 /* ViewModel */,
 				161AF8E82C66BB5900854037 /* View */,
+				161AF8E92C66BB6500854037 /* ViewModel */,
 			);
 			path = DrawDetail;
 			sourceTree = "<group>";
@@ -659,8 +645,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				161AF86E2C6417E800854037 /* SuperLottoUITests.swift in Sources */,
-				161AF8702C6417E800854037 /* SuperLottoUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
