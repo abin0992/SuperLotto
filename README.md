@@ -9,7 +9,7 @@ The app loads latest draw results and selecting a result displays result details
 
 For now, only list screen is covered by tests 
 The view model, the networking layer and models and business logic for this screen is completedly covered by unit tests
-- The home page loads list of draw results. The order is latest result is displayed on top of list. (Assumption the currency is USD)
+- The home page loads list of draw results. The order is latest result is displayed on top of list. (Assumption - the currency is USD)
 - Pull to refresh the list
 - Error handling with retry
 - While selecting a draw, the detail screeen is displayed
